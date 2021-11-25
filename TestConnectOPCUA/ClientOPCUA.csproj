@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32583A2D-45A3-47CC-9341-206D1E4EA165}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestConnectOPCUA</RootNamespace>
+    <AssemblyName>TestConnectOPCUA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Opc.Ua.Client">
+      <HintPath>..\..\UA-.NETStandard-1.04.354.23\UA-.NETStandard-1.04.354.23\SampleApplications\Samples\Client.Net4\bin\Debug\Opc.Ua.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.ClientControls">
+      <HintPath>..\..\UA-.NETStandard-1.04.354.23\UA-.NETStandard-1.04.354.23\SampleApplications\Samples\Client.Net4\bin\Debug\Opc.Ua.ClientControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Configuration">
+      <HintPath>..\..\UA-.NETStandard-1.04.354.23\UA-.NETStandard-1.04.354.23\SampleApplications\Samples\Client.Net4\bin\Debug\Opc.Ua.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Core">
+      <HintPath>..\..\UA-.NETStandard-1.04.354.23\UA-.NETStandard-1.04.354.23\SampleApplications\Samples\Client.Net4\bin\Debug\Opc.Ua.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackButtonPressed.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueButton.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\00a7fef9-caee-43d3-a832-7c612bd1af7b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\0f415f1e-835e-4a3a-9c08-b7cf888f4dfd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\1dd6c059-f859-4cfa-ae52-fb69d6b398b5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\2d8c2e01-2e89-478e-8c75-fd36d56daf0f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\3f2d7b0a-905d-413b-bc6f-03c2523b5d6a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\029b10f3-8edf-46c8-bfb4-dc68f32fe937.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\33b8e550-bb12-4c93-a35a-027b1f549072.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\65da1809-9956-4bb2-a9a4-95d65c887d15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\66375d97-bc17-4827-850f-85f6099490e8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\a01e4908-12da-443c-8126-3022d0c4d2b6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\ARW02DN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\ARW02LT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\ARW02RT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\ARW02UP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Ask_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\b289a267-0526-47ba-8b24-f4e8576da677.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\c8054597-dfd1-4125-8082-a417f7719f7e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\closedoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\e5fa7d9e-9db9-403b-9441-fe255d5ed836.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\errlb_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\fire_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Good.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Grau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\keystp_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\lift_door_close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\lift_door_open.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\lift_people.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Lift_people_close1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\mp_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\nocontr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\NoNet_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\off_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\open_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\opendoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\otis_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\people_door_open.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\photo5458581289650205992.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\photo5458581289650205999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\photo5458581289650206009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\power_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\schaht_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\stop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\STOP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\stop_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\00a7fef9-caee-43d3-a832-7c612bd1af7b.jpg" />
+    <Content Include="Resources\029b10f3-8edf-46c8-bfb4-dc68f32fe937.jpg" />
+    <Content Include="Resources\0f415f1e-835e-4a3a-9c08-b7cf888f4dfd.jpg" />
+    <Content Include="Resources\1dd6c059-f859-4cfa-ae52-fb69d6b398b5.jpg" />
+    <Content Include="Resources\2d8c2e01-2e89-478e-8c75-fd36d56daf0f.jpg" />
+    <Content Include="Resources\33b8e550-bb12-4c93-a35a-027b1f549072.jpg" />
+    <Content Include="Resources\3f2d7b0a-905d-413b-bc6f-03c2523b5d6a.jpg" />
+    <Content Include="Resources\65da1809-9956-4bb2-a9a4-95d65c887d15.jpg" />
+    <Content Include="Resources\66375d97-bc17-4827-850f-85f6099490e8.jpg" />
+    <Content Include="Resources\783dd093-f1c8-4394-8a4f-3640fd694848.mp4" />
+    <Content Include="Resources\a01e4908-12da-443c-8126-3022d0c4d2b6.jpg" />
+    <Content Include="Resources\ARW02DN.png" />
+    <Content Include="Resources\ARW02LT.png" />
+    <Content Include="Resources\ARW02RT.png" />
+    <Content Include="Resources\ARW02UP.png" />
+    <Content Include="Resources\Ask_r.png" />
+    <Content Include="Resources\b289a267-0526-47ba-8b24-f4e8576da677.jpg" />
+    <Content Include="Resources\c8054597-dfd1-4125-8082-a417f7719f7e.jpg" />
+    <Content Include="Resources\closedoor.png" />
+    <Content Include="Resources\down.bmp" />
+    <Content Include="Resources\e5fa7d9e-9db9-403b-9441-fe255d5ed836.jpg" />
+    <Content Include="Resources\errlb_r.png" />
+    <Content Include="Resources\fire_r.png" />
+    <Content Include="Resources\Good.png" />
+    <Content Include="Resources\Grau.png" />
+    <Content Include="Resources\icon.jpg" />
+    <Content Include="Resources\keystp_r.png" />
+    <Content Include="Resources\Lift_close1.gif.mp4" />
+    <Content Include="Resources\Lift_close2.gif.mp4" />
+    <Content Include="Resources\Lift_closeAll.gif.mp4" />
+    <Content Include="Resources\lift_door_close.jpg" />
+    <Content Include="Resources\lift_door_open.jpg" />
+    <Content Include="Resources\Lift_open1.gif.mp4" />
+    <Content Include="Resources\Lift_open2.gif.mp4" />
+    <Content Include="Resources\Lift_openAll.gif.mp4" />
+    <Content Include="Resources\lift_people.jpg" />
+    <Content Include="Resources\Lift_people_close1.gif.mp4" />
+    <Content Include="Resources\Lift_people_close2.gif.mp4" />
+    <Content Include="Resources\Lift_people_closeAll.gif.mp4" />
+    <Content Include="Resources\Lift_people_open1.gif.mp4" />
+    <Content Include="Resources\Lift_people_open2.gif.mp4" />
+    <Content Include="Resources\Lift_people_openAll.gif.mp4" />
+    <Content Include="Resources\mp_r.png" />
+    <Content Include="Resources\nocontr.png" />
+    <Content Include="Resources\NoNet_r.png" />
+    <Content Include="Resources\off_r.png" />
+    <Content Include="Resources\opendoor.png" />
+    <Content Include="Resources\open_r.png" />
+    <Content Include="Resources\otis_r.png" />
+    <Content Include="Resources\people_door_open.PNG" />
+    <Content Include="Resources\photo5458581289650205992.jpg" />
+    <Content Include="Resources\photo5458581289650205999.jpg" />
+    <Content Include="Resources\photo5458581289650206009.jpg" />
+    <Content Include="Resources\power_r.png" />
+    <Content Include="Resources\quest.png" />
+    <Content Include="Resources\schaht_r.png" />
+    <Content Include="Resources\stop.bmp" />
+    <Content Include="Resources\STOP.png" />
+    <Content Include="Resources\stop_r.png" />
+    <Content Include="Resources\up.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
